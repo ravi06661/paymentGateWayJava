@@ -5,6 +5,18 @@ public class TransactionDetailes {
 	private String orderId;
 	private String currency;
 	private Integer amount;
+	private String key;
+	public TransactionDetailes(String orderId, String currency, Integer amount, String key) {
+		super();
+		this.orderId = orderId;
+		this.currency = currency;
+		this.amount = amount;
+		this.key = key;
+	}
+	public TransactionDetailes() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public String getOrderId() {
 		return orderId;
 	}
@@ -23,10 +35,14 @@ public class TransactionDetailes {
 	public void setAmount(Integer amount) {
 		this.amount = amount;
 	}
-	public TransactionDetailes(String orderId, String currency, Integer amount) {
-		super();
-		this.orderId = orderId;
-		this.currency = currency;
-		this.amount = amount;
+	public String getKey() {
+		return key;
 	}
+	public void setKey(String key) {
+		this.key = key;
+	}
+	
+	
+	
+	
 }

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.ravi.model.TransactionDetailes;
 import com.ravi.service.IOrderService;
+import com.ravi.util.AppContants;
 import com.razorpay.Order;
 import com.razorpay.RazorpayClient;
 import com.razorpay.RazorpayException;
@@ -30,7 +31,7 @@ public class OrderServiceImpl implements IOrderService {
 		String orderId = order.get("id");
 		String currency=order.get("currency");
 		Integer amount=order.get("amount");
-		TransactionDetailes detailes=new TransactionDetailes(orderId, currency, amount);
+		TransactionDetailes detailes=new TransactionDetailes(orderId, currency, amount,AppContants.KEY);
 		
 		return detailes;
 	}
